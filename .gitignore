@@ -1,0 +1,9 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+.DS_Store
+.theos/
+Cover.jpg
+google-form-cover.png
+packageicon.jpg
+packageicon.png
+packages/
+*.psd

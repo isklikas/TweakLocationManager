@@ -1,0 +1,9 @@
+Package: com.isklikas.springboardlocationmanager
+Name: SpringBoardLocationManager
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Show your device's location in a simple alert. Meant to be used for getting the device location in a tweak.
+Maintainer: isklikas
+Author: isklikas
+Section: Tweaks
