@@ -42,14 +42,14 @@
 	
 	//Run: - (BOOL)locationServicesAvailable;
 	//Just to make sure it's available. You can use this as a check in your tweak.
-    typedef BOOL (*getIfAvailable)(void*, SEL);
+	typedef BOOL (*getIfAvailable)(void*, SEL);
 	SEL getIfAvailableSEL = @selector(locationServicesAvailable);
 	getIfAvailable getIfAvailableIMP = (getIfAvailable)[[locationManager class] instanceMethodForSelector:getIfAvailableSEL];
 	BOOL available = getIfAvailableIMP((__bridge void*)locationManager, getIfAvailableSEL);
 	
 	//Run: - (BOOL)locationServicesApproved;
 	//Just to make sure we're authorized to request a location. You can also use this as a check in your tweak.
-    typedef BOOL (*getIfApproved)(void*, SEL);
+	typedef BOOL (*getIfApproved)(void*, SEL);
 	SEL getIfApprovedSEL = @selector(locationServicesApproved);
 	getIfApproved getIfApprovedIMP = (getIfApproved)[[locationManager class] instanceMethodForSelector:getIfApprovedSEL];
 	BOOL approved = getIfApprovedIMP((__bridge void*)locationManager, getIfApprovedSEL);
@@ -67,9 +67,9 @@
 	
 	//I'm suppressing the deprecation warning, because the old UIAlertView is much simpler ;P 
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location" message:[NSString stringWithFormat:@"%@ \n %d \n %d", location, available, approved] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
+	[alert show];
     
-    #pragma clang diagnostic pop
+	#pragma clang diagnostic pop
 }
 
 %end
